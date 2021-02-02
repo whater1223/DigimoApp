@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		E7260D8025C958DD0011B96D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7260D7F25C958DD0011B96D /* AppDelegate.swift */; };
 		E7260D8225C958DD0011B96D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7260D8125C958DD0011B96D /* SceneDelegate.swift */; };
-		E7260D8425C958DD0011B96D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7260D8325C958DD0011B96D /* ViewController.swift */; };
 		E7260D8725C958DD0011B96D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7260D8525C958DD0011B96D /* Main.storyboard */; };
 		E7260D8925C958DE0011B96D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7260D8825C958DE0011B96D /* Assets.xcassets */; };
 		E7260D8C25C958DE0011B96D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7260D8A25C958DE0011B96D /* LaunchScreen.storyboard */; };
+		E7260D9725C959AC0011B96D /* DigimoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7260D9625C959AC0011B96D /* DigimoViewController.swift */; };
+		E7260D9A25C960510011B96D /* FlowerDance.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7260D9925C960510011B96D /* FlowerDance.mp3 */; };
+		E7260D9D25C9CAEC0011B96D /* food.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E7260D9C25C9CAEC0011B96D /* food.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E7260D7C25C958DD0011B96D /* DigimoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigimoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7260D7F25C958DD0011B96D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E7260D8125C958DD0011B96D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E7260D8325C958DD0011B96D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E7260D8625C958DD0011B96D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7260D8825C958DE0011B96D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E7260D8B25C958DE0011B96D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7260D8D25C958DE0011B96D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7260D9625C959AC0011B96D /* DigimoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigimoViewController.swift; sourceTree = "<group>"; };
+		E7260D9925C960510011B96D /* FlowerDance.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = FlowerDance.mp3; path = ../../../../Downloads/FlowerDance.mp3; sourceTree = "<group>"; };
+		E7260D9C25C9CAEC0011B96D /* food.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = food.mp3; path = ../../../../Downloads/food.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 			children = (
 				E7260D7F25C958DD0011B96D /* AppDelegate.swift */,
 				E7260D8125C958DD0011B96D /* SceneDelegate.swift */,
-				E7260D8325C958DD0011B96D /* ViewController.swift */,
 				E7260D8525C958DD0011B96D /* Main.storyboard */,
+				E7260D9625C959AC0011B96D /* DigimoViewController.swift */,
 				E7260D8825C958DE0011B96D /* Assets.xcassets */,
 				E7260D8A25C958DE0011B96D /* LaunchScreen.storyboard */,
 				E7260D8D25C958DE0011B96D /* Info.plist */,
+				E7260D9925C960510011B96D /* FlowerDance.mp3 */,
+				E7260D9C25C9CAEC0011B96D /* food.mp3 */,
 			);
 			path = DigimoApp;
 			sourceTree = "<group>";
@@ -125,8 +131,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7260D8C25C958DE0011B96D /* LaunchScreen.storyboard in Resources */,
+				E7260D9D25C9CAEC0011B96D /* food.mp3 in Resources */,
 				E7260D8925C958DE0011B96D /* Assets.xcassets in Resources */,
 				E7260D8725C958DD0011B96D /* Main.storyboard in Resources */,
+				E7260D9A25C960510011B96D /* FlowerDance.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7260D8425C958DD0011B96D /* ViewController.swift in Sources */,
+				E7260D9725C959AC0011B96D /* DigimoViewController.swift in Sources */,
 				E7260D8025C958DD0011B96D /* AppDelegate.swift in Sources */,
 				E7260D8225C958DD0011B96D /* SceneDelegate.swift in Sources */,
 			);
