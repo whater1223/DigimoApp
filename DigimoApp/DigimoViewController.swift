@@ -211,20 +211,7 @@ class DigimoViewController: UIViewController {
                     playerLooper = AVPlayerLooper(player: queuePlayer, templateItem: playerItem)
                     queuePlayer.play()
             
-    //        guard let newpath = Bundle.main.path(forResource: "進化", ofType: "mp3") else {
-    //            print("no such path")
-    //            return
-    //        }
-    //        do{
-    //            audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: newpath))
-    //        }catch{
-    //            print(error.localizedDescription)
-    //
-    //        }
-    //        audioPlayer?.play()
-    //
-            
-            // Do any additional setup after loading the view, typically from a nib.
+    
         }
 
 
