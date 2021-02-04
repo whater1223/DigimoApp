@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import GameplayKit
 import AVFoundation
 
 
@@ -14,6 +13,7 @@ struct Qna{
     var question:String
     var answer:[String]
     var correctAnwer:Int
+    
 }
 
 class DigimoViewController: UIViewController {
@@ -53,8 +53,11 @@ class DigimoViewController: UIViewController {
         //不超過總題數
         var waringNumber = 0
         
-        var questionArray = [Qna(question: "下列何者非數碼寶貝？", answer: ["1. 亞古獸","3. 天使獸","2. 大便獸","4. 長頸鹿"], correctAnwer: 4),Qna(question: "下列何者是'數碼寶貝大冒險'的主角之一？", answer: ["1. 小白","3. 碳次郎","2. 八神太一","4. 李白"], correctAnwer: 3),Qna(question: "'數碼寶貝大冒險'的舞台在日本的何處？", answer: ["1. 北海道","3. 東京","2. 大阪","4. 京都"], correctAnwer: 2),Qna(question: "八神太一的徽章代表了什麼樣的特質", answer: ["1. 橙色勇氣","3. 藍色友情","2. 紅色愛心","4. 金色希望"], correctAnwer: 1),Qna(question: "'數碼寶貝大冒險'的片頭曲是？", answer: ["1. It's my life","3. Butter-Fly","2. flower dance","4. Flashlight"], correctAnwer: 2),Qna(question: "'數碼寶貝大冒險'的亞古獸進化是什麼？", answer: ["1. 惡魔獸","3. 仙女獸","2. 仙人掌獸","4. 暴龍獸"], correctAnwer: 4),Qna(question: "數碼獸存在於何處？", answer: ["1. 大海","3. 深山","2. 網際網路","4. 外太空"], correctAnwer: 3),Qna(question: "武之內空的數碼寶貝是？", answer: ["1. 亞古獸","3. 大便獸","2. 加布獸","4. 海豚獸"], correctAnwer: 3),Qna(question: "太刀川美美的數碼寶貝是？", answer: ["1. 垃圾獸","3. 加布獸","2. 巴魯獸","4. 海豚獸"], correctAnwer: 3),Qna(question: "八神光的數碼寶貝是？", answer: ["1. 比丘獸","3. 加布獸","2. 迪路獸","4. 海豚獸"], correctAnwer: 3)]
-        
+    var questionArray = [Qna(question: "下列何者非數碼寶貝？", answer: ["1. 亞古獸","3. 天使獸","2. 大便獸","4. 長頸鹿"], correctAnwer: 4),Qna(question: "下列何者是'數碼寶貝大冒險'的主角之一？", answer: ["1. 小白","3. 碳次郎","2. 八神太一","4. 李白"], correctAnwer: 3),Qna(question: "'數碼寶貝大冒險'的舞台在日本的何處？", answer: ["1. 北海道","3. 東京","2. 大阪","4. 京都"], correctAnwer: 2),Qna(question: "八神太一的徽章代表了什麼樣的特質", answer: ["1. 橙色勇氣","3. 藍色友情","2. 紅色愛心","4. 金色希望"], correctAnwer: 1),Qna(question: "'數碼寶貝大冒險'的片頭曲是？", answer: ["1. It's my life","3. Butter-Fly","2. flower dance","4. Flashlight"], correctAnwer: 2),Qna(question: "'數碼寶貝大冒險'的亞古獸進化是什麼？", answer: ["1. 惡魔獸","3. 仙女獸","2. 仙人掌獸","4. 暴龍獸"], correctAnwer: 4),Qna(question: "數碼獸存在於何處？", answer: ["1. 大海","3. 深山","2. 網際網路","4. 外太空"], correctAnwer: 3),Qna(question: "武之內空的數碼寶貝是？", answer: ["1. 亞古獸","3. 大便獸","2. 加布獸","4. 海豚獸"], correctAnwer: 3),Qna(question: "太刀川美美的數碼寶貝是？", answer: ["1. 垃圾獸","3. 加布獸","2. 巴魯獸","4. 海豚獸"], correctAnwer: 3),Qna(question: "八神光的數碼寶貝是？", answer: ["1. 比丘獸","3. 加布獸","2. 迪路獸","4. 海豚獸"], correctAnwer: 3)]
+    
+    @IBAction func UnWind(for segue :UIStoryboardSegue)
+    {
+    }
         
         @IBAction func nextButtonPressed(_ sender: UIButton) {
 
@@ -94,11 +97,14 @@ class DigimoViewController: UIViewController {
                 score -= 10
                 myScore.text = "分數： \(score)"
             }
-            //總共六題，到第六題選項按下去就跳出總分視窗
+            //總共10題，到第10題選項按下去就跳出總分視窗
             if waringNumber == 10{
                 waringNumber = 0
+                performSegue(withIdentifier: "showResult", sender: nil)
                 warning()
             }
+           
+                
         }
         
         
@@ -115,9 +121,10 @@ class DigimoViewController: UIViewController {
                 myScore.text = "分數： \(score)"
                 
             }
-            //總共六題，到第六題選項按下去就跳出總分視窗
+            //總共10題，到第10題選項按下去就跳出總分視窗
             if waringNumber == 10{
                 waringNumber = 0
+                performSegue(withIdentifier: "showResult", sender: nil)
                 warning()
             }
            
@@ -134,10 +141,12 @@ class DigimoViewController: UIViewController {
                 score -= 10
                 myScore.text = "分數： \(score)"
             }
-            //總共六題，到第六題選項按下去就跳出總分視窗
+            //總共10題，到第10題選項按下去就跳出總分視窗
             if waringNumber == 10{
                 waringNumber = 0
-                warning()
+                performSegue(withIdentifier: "showResult", sender: nil)
+                
+               warning()
             }
             
         }
@@ -154,10 +163,13 @@ class DigimoViewController: UIViewController {
                 myScore.text = "分數： \(score)"
                 
             }
-         //總共六題，到第六題選項按下去就跳出總分視窗
+         //總共10題，到第10題選項按下去就跳出總分視窗
             if waringNumber == 10{
                 waringNumber = 0
-                warning()
+                performSegue(withIdentifier: "showResult", sender: nil)
+                
+                
+               warning()
             }
         }
         
@@ -213,7 +225,24 @@ class DigimoViewController: UIViewController {
             
     
         }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "showResult" {
+//            if let vc = segue.destination as? ResultViewController {
+//                vc.scroe = self.score
+//            }
+//        }
+//    }
 
+    @IBSegueAction func showResult(_ coder: NSCoder) -> ResultViewController? {
+        
+        
+        let controller = ResultViewController(coder: coder)
+        controller?.point = score
+        
+        return controller
+    }
+    
 
     }
 
