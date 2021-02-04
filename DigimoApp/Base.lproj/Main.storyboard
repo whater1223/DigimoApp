@@ -138,25 +138,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ed-cP-ISf">
-                                <rect key="frame" x="106" y="319" width="162" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
-                                <state key="normal" title="restart"/>
-                                <connections>
-                                    <segue destination="MS4-bD-I1k" kind="unwind" unwindAction="UnWindFor:" id="AW5-Oz-9GU"/>
-                                </connections>
-                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="5266" translatesAutoresizingMaskIntoConstraints="NO" id="MZI-Yf-NJD">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baA-YU-2gU">
                                 <rect key="frame" x="18" y="149" width="339" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.47043412923812866" green="0.90849822759628296" blue="0.79519754648208618" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5ed-cP-ISf">
+                                <rect key="frame" x="106" y="319" width="162" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                <state key="normal" title="restart">
+                                    <color key="titleColor" red="1" green="0.30888805650000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.44842225313186646" green="0.98143643140792847" blue="0.031640578061342239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MS4-bD-I1k" kind="unwind" unwindAction="UnWindFor:" id="AW5-Oz-9GU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vlY-2F-8dN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="MZI-Yf-NJD" firstAttribute="top" secondItem="ARW-GZ-GSm" secondAttribute="top" id="2Fh-tt-ZOj"/>
+                            <constraint firstAttribute="bottom" secondItem="MZI-Yf-NJD" secondAttribute="bottom" id="6HC-hs-dgw"/>
+                            <constraint firstItem="MZI-Yf-NJD" firstAttribute="trailing" secondItem="vlY-2F-8dN" secondAttribute="trailing" id="Ifz-nd-oN5"/>
+                            <constraint firstItem="MZI-Yf-NJD" firstAttribute="leading" secondItem="vlY-2F-8dN" secondAttribute="leading" id="PYv-7h-TRE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="總分數" id="fio-OC-eut"/>
                     <connections>
@@ -188,6 +202,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="5266" width="856" height="1004"/>
         <image name="數碼寶貝" width="702" height="1250"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -197,6 +212,12 @@
         </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
